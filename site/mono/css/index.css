@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/*mainvisual*/
+#mainvisual{
+    min-height:100vh;
+    width: 100%;
+    padding:70px 0 10px;
+    margin-bottom:100px;
+    position:relative;
+}
+.catch{
+    margin:30vh 0 40px;
+    font-size:2.5rem;
+}
+.catch-en{
+    display: inline-block;
+}
+
+.background li{/*ここから背景切り替えアニメーション*/
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    z-index:-1;
+    animation:change 21s infinite;
+}
+@keyframes change{
+    0%{ opacity: 0; }
+    8%{ opacity: 1; }
+    32%{ opacity: 1; }
+    40%{ opacity: 0; }
+    100%{ opacity: 0; }
+}
+.background li:nth-of-type(1){
+    animation-delay: -2s;
+}
+.background li:nth-of-type(2){
+    animation-delay: 5s;
+}
+.background li:nth-of-type(3){
+    animation-delay: 12s;
+}
+.background img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: bottom right;
+}
+
+
+
+
+/*comment*/
+.comment{
+    display: flex;
+    align-items: baseline;
+    gap:10px;
+    margin-bottom:100px;
+}
+.sub{
+    font-size:1.25rem;
+}
+.sub-en{
+    font-size: 0.875rem;;
+}
+
+/*works*/
+#works{
+    margin-bottom:100px;
+}
+.slider{
+    margin-bottom:60px;
+}
+.slider img{
+    width:100%;
+}
+.btn{
+    text-align: center;
+}
+.frame{
+    display: inline-block;
+    position:relative;
+    background:pink;
+}
+.btn a{
+    background-color:var(--blue);
+    display: inline-block;
+    padding:15px 50px;
+    font-size:1.125rem;
+    font-weight: 500;
+    color:#fff;
+    transition:all 0.3s ease;
+}
+.btn a:hover{
+    background-color:#f7f6f4;
+    color:var(--blue);
+    transition-delay:0s;
+}
+/*frameが上と右、.btn aが下と左*/
+.frame::before,  .frame::after, .btn a::before, .btn a::after{
+    position: absolute;
+    content:"";
+    background:var(--blue);
+    transition: transform 0.3s linear;
+}
+.frame::before{
+    width:100%;
+    height:1px;
+    top:0;
+    left:0;
+    transform:scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.2s linear;
+}
+.frame:hover::before{
+    transform:scaleX(1);
+    transition-delay: 0s;
+}
+.frame::after{
+    width:1px;
+    height:100%;
+    top:0;
+    right:0;
+    transform: scaleY(0);
+    transform-origin: top right;
+    transition: transform 0.1s linear;
+}
+.frame:hover::after{
+    transform:scaleY(1);
+    transition-delay: 0.2s;
+}
+.btn a::before{
+    width:100%;
+    height:1px;
+    bottom:0;
+    right:0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.2s linear;
+}
+.btn a:hover::before{
+    transform: scaleX(1);
+    transition-delay: 0.3s;
+}
+.btn a::after{
+    width:1px;
+    height:100%;
+    bottom:0;
+    left:0;
+    transform: scaleY(0);
+    transform-origin: bottom left;
+}
+.btn a:hover::after{
+    transform: scaleY(1);
+    transition-delay: 0.5s;
+}
+
+/*topic*/
+#topic{
+    margin-bottom:120px;
+}
+.topic-content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom:60px;
+    row-gap: 30px;
+}
+.topic-content article{
+    width:22%;
+}
+.topic-content a{
+    transition:opacity 0.2s;
+}
+.topic-content a:hover{
+    opacity: 0.7;
+}
+.topic-content img{
+    width:50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    margin:0 auto;
+    border-radius: 0 30%;
+    margin-bottom:20px;
+}
+.topic-content time{
+    font-size:0.875rem;
+    color:#707070;
+}
+.topic-content h3{
+    font-weight: 500;
+    font-size:1rem;
+}
+
+
+@media screen and (max-width:768px){
+    #mainvisual{
+        margin-bottom: 80px;
+    }
+    .catch{
+        margin:17vh 0 35px;
+        font-size:1.5rem;
+    }
+    .catch-en{
+        font-size:0.875rem;
+    }
+    .comment{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:5px;
+        margin-bottom: 80px;
+    }
+    #works{
+        margin-bottom:80px;
+    }
+    .slider{
+        margin-bottom: 40px;
+    }
+    .btn a{
+        font-size: 1rem;
+    }
+    .sect-title/*topページだけ*/{
+        margin-bottom:15px;
+    }
+    #topic{
+        margin-bottom:100px;
+    }
+    .topic-content{
+        margin-bottom: 40px;
+    }
+    .topic-content article{
+        width:43%;
+    }
+    .topic-content img{
+        margin-bottom:10px;
+    }
+    .topic-content time{
+        font-size:0.8125rem;
+    }
+    .topic-content h3{
+        font-size: 0.875rem;
+    }
+}

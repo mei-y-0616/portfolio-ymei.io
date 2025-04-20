@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+
+.header-right a[href="topic.html"]::before{
+    transform: scaleX(1);
+}
+
+#topic{
+    margin-bottom:120px;
+    padding-top:110px;
+}
+.topic-content{
+    width:90%;
+    margin:0 auto;
+}
+.topic-content article:not(:last-of-type){
+    margin-bottom:40px;
+}
+.topic-content a{
+    display: flex;
+    align-items: center;
+    gap:30px;
+    transition:opacity 0.2s
+}
+.topic-content a:hover{
+    opacity: 0.7;
+}
+.topic-content img{
+    width:10%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 0 30%;
+}
+.topic-content time{
+    font-size:0.875rem;
+    margin-bottom:5px;
+    color:#707070;
+}
+.topic-content h3{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px){
+    #topic{
+        margin-bottom:100px;
+        padding-top:120px;
+    }
+    .topic-content img{
+        width:25%;
+    }
+}

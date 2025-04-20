@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cafe Husky</title>
+        <meta name="description" content="札幌市中央区にあるカフェ「Cafe Husky」のホームページです。店舗紹介やメニューなどを掲載しています。">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="jquery.inview.min.js"></script>
+        <script src="https://kit.fontawesome.com/cb6dd7648b.js" crossorigin="anonymous"></script>
+        <script src="common.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header-content container">
+                <h1 class="logo-header">
+                    <a href="index.html"><img src="img/logo-header.svg" alt=""></a>
+                </h1>
+                <div class="header-right">
+                    <nav class="nav-pc">
+                        <ul>
+                            <li><a href="#menu">MENU</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#access">ACCESS</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+            </div>
+            <div class="drawer">
+                <nav>
+                    <ul>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div id="mainvisual">
+                <div class="img-main"></div>
+                <h2 class="site-title">Cafe Husky</h2>
+            </div>
+
+            <section id="menu">
+                <div class="container">
+                    <h3 class="sect-title">MENU</h3>
+                    <ul class="limited">
+                        <li> 
+                            <div class="limited-img menu1">
+                                <p><span class="left">期間限定</span>スイートポテト<span class="value">450円</span></p>
+                            </div>
+                            <p>北海道産生クリームを使用。なめらかな口あたりに仕上げました。テイクアウトも可能です。</p>
+                        </li>
+                        <li> 
+                            <div class="limited-img menu2">
+                                <p><span class="left">期間限定</span>さつまいものモンブラン<span class="value">550円</span></p>
+                            </div>
+                            <p>秋の王道スイーツのモンブランに、北海道産の「シルクスイート」というさつまいもをトッピングした、秋ならではの一品。</p>
+                        </li>
+                    </ul>
+                    <div class="menu-list">
+                        <dl>
+                            <div class="dl-flex size">
+                                <dt></dt>
+                                <dd><span class="cir">S</span> / <span class="cir">M</span></dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>今日のコーヒー</dt>
+                                <dd>430 / 480</dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>huskyブレンド</dt>
+                                <dd>400 / 450</dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>エスプレッソ</dt>
+                                <dd>350 / 450</dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>カフェラテ</dt>
+                                <dd>500 / 600</dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>ショコララテ</dt>
+                                <dd>550 / 650</dd>
+                            </div>
+                        </dl>
+                        <dl>
+                            <div class="dl-flex">
+                                <dt>ミニクッキー（6枚入り）</dt>
+                                <dd>200</dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>チーズケーキ</dt>
+                                <dd>400</dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>トースト</dt>
+                                <dd>350</dd>
+                            </div>
+                            <div class="dl-flex">
+                                <dt>ミニソフトクリーム</dt>
+                                <dd>300</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="container">
+                    <h3 class="sect-title">ABOUT</h3>
+                    <div class="about1">
+                        <div class="about1-img">
+                            <div class="test1"></div>
+                        </div>
+                        <p>
+                            「街にやすらぎを」をコンセプトにオープンした当店。<br>
+                            街中にありながら、落ち着きを感じられる店内となっております。<br>
+                            フリーWi-Fiも完備してあるため、ごゆっくり当店での時間をお過ごしいただけます。
+                        </p>
+                    </div>
+                    <div class="about2">
+                        <div class="about2-img">
+                            <div class="test2"></div>
+                        </div>
+                        <p>
+                            当店自慢の「huskyブレンド」。<br>
+                            店主が世界各地のコーヒー豆から厳選した豆を試行錯誤の末、たどり着いたこだわりの割合でブレンドし、提供しております。<br>
+                            豊かな香り、そして心地の良い苦味と酸味をお楽しみください。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="access">
+                <div class="container">
+                    <h3 class="sect-title">ACCESS</h3>
+                    <div class="access-flex">
+                        <div class="access-text">
+                            <p>〒060-8612 札幌市中央区大通西2丁目9</p>
+                            <p>
+                                地下鉄大通駅（南北線・東西線・東豊線）から徒歩約3分<br>
+                                市電西4丁目停留場から徒歩約5分
+                            </p>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11660.797892100149!2d141.33703981619655!3d43.058272088181795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2991c89d74c1%3A0xf503694618a90caa!2z5pyt5bmM5biCIOS4reWkruWMuuW9ueaJgCAo5Luu5bqB6IiOKQ!5e0!3m2!1sja!2sjp!4v1726315780273!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <h3 class="sect-title">CONTACT</h3>
+                    <form action="#">
+                        <dl class="form">
+                            <dt><label for="name">お名前</label></dt>
+                            <dd>
+                                <input type="text" id="name" name="your-name">
+                                <p id="name-error" class="error"></p>
+                            </dd>
+
+                            <dt><label for="address">メールアドレス</label></dt>
+                            <dd>
+                                <input type="email" id="address" name="your-address">
+                                <p id="address-error" class="error"></p>
+                            </dd>
+
+                            <dt><label for="inquiry">お問い合わせ内容</dt>
+                            <dd>
+                                <textarea rows="4" id="inquiry" name="your-inquiry"></textarea>
+                                <p id="inquiry-error" class="error"></p>
+                            </dd>
+                        </dl>
+                        <div class="btn">
+                            <button id="submit-button" type="button" value="">送信</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <a href="#" class="to-top"></a>
+
+            <div class="container">
+                <div class="footer-flex">
+                    <div class="footer-left">
+                        <h1 class="footer-logo">
+                            <a href="index.html">
+                                <img src="img/logo-footer.svg">
+                            </a>
+                        </h1>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                    </div>
+                    <ul class="footer-right">
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <p class="copy">&copy; 2024 Cafe Husky</p>
+            </div>
+            
+        </footer>
+    </body>
+</html>

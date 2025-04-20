@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+
+.header-right a[href="contact.html"]::before{
+    transform: scaleX(1);
+}
+
+#contact{
+    margin-bottom:120px;
+    padding-top:110px;
+    text-align: center;
+}
+
+.mail{
+    padding:25px;
+    display: inline-block;
+    background:#fff;
+    position:relative;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom:30px;
+}
+/*三角と三角で手紙の線を作る*/
+.mail::before, .mail::after{
+    position:absolute;
+    content:"";
+    width:100%;
+    height:100%;
+    left:0;
+    clip-path: polygon(0 0, 100% 0%, 50% 50%);
+}
+.mail::before{
+    background:#000;
+    top:0px;
+}
+.mail::after{
+    background:#fff;
+    top:-1px
+}
+.mail span{
+    background:#fff;
+    font-size:1.125rem;
+    position:relative;
+    z-index: 5;
+}
+
+.or{
+    margin-bottom:20px;
+    display: inline-block;
+    font-weight: 400;
+}
+.main-text{
+    font-size:1.125rem;
+    margin-bottom:25px;
+    font-weight:500;
+}
+.sns-text{
+    margin-bottom:20px;
+}
+.sns-flex{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+}
+.sns-flex img{
+    height:50px;
+}
+
+
+
+@media screen and (max-width:768px){
+    #contact{
+        margin-bottom:100px;
+        padding-top:120px;
+    }
+    .mail span{
+        font-size: 1rem;
+    }
+    .main-text{
+        font-size: 1rem;
+    }
+}

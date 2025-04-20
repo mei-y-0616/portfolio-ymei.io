@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+.header-right a[href="works.html"]::before{
+    transform: scaleX(1);
+}
+
+#works{
+    margin-bottom:120px;
+    padding-top:110px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 40px;
+}
+.grid li{
+    padding:0 16px;
+}
+.grid img{
+    margin-bottom:10px;
+}
+.grid h3{
+    text-align:center;
+    font-size:0.875rem;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px){
+    #works{
+        margin-bottom:100px;
+        padding-top:120px;
+    }
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 30px;
+    }
+}

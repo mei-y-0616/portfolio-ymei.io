@@ -1,0 +1,457 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    background-color: var(--bg);
+    color: var(--font);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+:root {
+    --bg: #E0E5EC;
+    --neumo: 10px 10px 20px 0px #A4B2C6, -10px -10px 20px 0px #FFFFFF;
+    --font: #3A3A3A;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 160px;
+}
+
+
+/***header***/
+#header {
+    /* background-color: pink; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    z-index: 100;
+}
+
+.header-content {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.logo {
+    line-height: 1px;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo img {
+    height: 50px;
+}
+
+
+/**ハンバーガーメニュー**/
+.hb {
+    display: none;
+    width: 40px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 30;
+}
+
+.hb::before,
+.hb::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--font);
+    transform-origin: center;
+    transition: all 0.2s;
+}
+
+.hb::before {
+    top: 0;
+}
+
+.hb::after {
+    bottom: 0;
+}
+
+.open .hb::before,
+.open .hb::after {
+    top: 50%;
+}
+
+.open .hb::before {
+    transform: rotate(25deg);
+}
+
+.open .hb::after {
+    transform: rotate(-25deg);
+}
+
+.drawer {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(230, 234, 240, 0.9);
+    z-index: 20;
+    padding: 70px 20px 0;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.drawer nav ul li a {
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+    border-bottom: 1px dotted var(--font);
+}
+
+
+/***main***/
+main {
+    padding-top: 100px;
+}
+
+/**works**/
+.sect-title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding-left: 8px;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.sect-title::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--font);
+    border-radius: 2px;
+}
+
+.sect-child-title {
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+}
+
+
+/*site-list*/
+
+.site-list article {
+    margin-bottom: 130px;
+}
+
+.site-list article:last-child {
+    margin-bottom: 0;
+}
+
+.site-title {
+    font-weight: 400;
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+}
+
+.site-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-text {
+    width: 27%;
+    margin-top: 30px;
+}
+
+.site-text p {
+    margin-bottom: 40px;
+}
+
+.site-link-btn {
+    display: block;
+    width: fit-content;
+    padding: 16px 40px;
+    border-radius: 40px;
+    box-shadow: var(--neumo);
+
+}
+
+.site-link-btn:hover img {
+    transform: translateX(6px);
+}
+
+.site-link-btn img {
+    width: 1.25rem;
+    vertical-align: middle;
+    transition: all 0.2s;
+}
+
+.site-img {
+    /*border-radius padding用*/
+    --outer-radius: 70px;
+    --inner-radius: 40px;
+
+    display: block;
+    width: 70%;
+    padding: calc(var(--outer-radius) - var(--inner-radius));
+    border-radius: var(--outer-radius);
+    box-shadow: var(--neumo);
+    aspect-ratio: 100/60;
+    flex-shrink: 0;
+}
+
+.site-img-inner {
+    overflow: hidden;
+    border-radius: var(--inner-radius);
+    position: relative;
+    height: 100%;
+}
+
+.site-img img {
+    transition: all 0.2s;
+    height: 100%;
+    object-fit: cover;
+}
+
+.site-img:hover img {
+    transform: scale(1.03);
+}
+
+.site-img-inner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.site-img:hover .site-img-inner::before {
+    opacity: 1;
+}
+
+
+
+/**aboutme**/
+.greeting {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.aboutme-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-img {
+    border-radius: 1000px;
+    overflow: hidden;
+    width: 250px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    box-shadow: var(--neumo);
+}
+
+.aboutme-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/**contact**/
+#contact p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mail {
+    /*メールボタンの線の色*/
+    --mail-border: #707882;
+
+    display: block;
+    margin: 0 auto 0;
+    max-width: 350px;
+    aspect-ratio: 10/6;
+    border-radius: 20px;
+    box-shadow: var(--neumo);
+    border: 2px solid var(--mail-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.mail::after,
+.mail::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    left: 0;
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+}
+
+.mail::before {
+    top: 0;
+    background-color: var(--mail-border);
+    z-index: 2;
+}
+
+.mail::after {
+    top: -2px;
+    background-color: var(--bg);
+    z-index: 3;
+}
+
+
+/***footer***/
+#footer {
+    padding: 10px 0;
+}
+
+.sns-link {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.sns-link img {
+    height: 40px;
+}
+
+.copy {
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+    :root {
+        --neumo: 8px 8px 16px 0px #A4B2C6, -8px -8px 16px 0px #FFFFFF;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .hb {
+        display: block;
+    }
+
+    .open .drawer {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .sect-child-title {
+        font-size: 1.25rem;
+        margin-bottom: 18px;
+    }
+
+    .site-list article {
+        margin-bottom: 80px;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .site-detail {
+        flex-direction: column-reverse;
+    }
+
+    .site-text {
+        width: 100%;
+    }
+
+    .site-text p {
+        margin-bottom: 20px;
+    }
+
+    .site-img {
+        --outer-radius: 40px;
+        --inner-radius: 22px;
+        width: 100%;
+    }
+
+
+    .greeting {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .aboutme-detail {
+        flex-direction: column-reverse;
+    }
+
+    .aboutme-img {
+        width: 200px;
+        margin-bottom: 30px;
+    }
+
+
+    #contact p {
+        text-align: start;
+    }
+
+    .mail {
+        max-width: 250px;
+    }
+}
