@@ -48,7 +48,7 @@ let d=new Date();
 let hours=d.getHours();
 let greeting="";
 
-if(0<=hours<=3||18<=hours){
+if(hours<=3||18<=hours){
     greeting="こんばんは";
 }else if(hours<=10){
     greeting="おはようございます";
