@@ -29,6 +29,7 @@ img {
     --bg: #E0E5EC;
     --neumo: 10px 10px 20px 0px #A4B2C6, -10px -10px 20px 0px #FFFFFF;
     --font: #3A3A3A;
+    --accent: #4D668C;
 }
 
 .container {
@@ -65,6 +66,31 @@ section {
 .header-nav ul {
     display: flex;
     gap: 30px;
+}
+
+.header-nav a {
+    position: relative;
+    line-height: 1.7;
+    display: block;
+    width: fit-content;
+}
+
+.header-nav a::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--accent);
+    scale:0 1;
+    transition: all 0.2s;
+    transform-origin: center;
+}
+
+.header-nav a:hover::before {
+    scale: 1;
 }
 
 .logo {
@@ -147,6 +173,10 @@ section {
     border-bottom: 1px dotted var(--font);
 }
 
+.drawer a {
+    position: relative;
+}
+
 
 /***main***/
 main {
@@ -170,7 +200,7 @@ main {
     left: 0;
     width: 2px;
     height: 100%;
-    background: var(--font);
+    background: var(--accent);
     border-radius: 2px;
 }
 
