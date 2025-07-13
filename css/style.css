@@ -30,6 +30,7 @@ img {
     --neumo: 10px 10px 20px 0px #A4B2C6, -10px -10px 20px 0px #FFFFFF;
     --font: #3A3A3A;
     --accent: #4D668C;
+    --accent2:#6793D0;
 }
 
 .container {
@@ -296,6 +297,8 @@ main {
     border-radius: 40px;
     box-shadow: var(--neumo);
     margin-bottom: 40px;
+    background-color: var(--accent2);
+    color:#fff;
 }
 
 .site-link-btn:hover img {
