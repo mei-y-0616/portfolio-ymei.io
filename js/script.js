@@ -121,3 +121,31 @@ function changeLang(beDataLang,afDataLang){
 
     nowLang=afDataLang;
 }
+
+
+
+//マウスストーカー
+function stalker(){
+    const stalker=document.getElementById("stalker");
+    addEventListener("mousemove",(e)=>{
+        const x=e.clientX;
+        const y=e.clientY;
+
+        stalker.style.opacity=0.6;
+        stalker.style.translate=`${x}px ${y}px`;
+    });
+
+    const links=gsap.utils.toArray([
+        "a",
+        "#lang-ch"
+    ]);
+    links.forEach(function(link){
+        link.addEventListener("mouseenter",()=>{
+            stalker.classList.add("js-hover");
+        });
+        link.addEventListener("mouseleave",()=>{
+            stalker.classList.remove("js-hover");
+        });
+    });
+};
+stalker();
