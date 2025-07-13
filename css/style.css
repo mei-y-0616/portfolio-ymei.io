@@ -25,6 +25,10 @@ img {
     vertical-align: bottom;
 }
 
+p{
+    line-height: 1.7;
+}
+
 :root {
     --bg: #E0E5EC;
     --neumo: 10px 10px 20px 0px #A4B2C6, -10px -10px 20px 0px #FFFFFF;
@@ -178,6 +182,32 @@ section {
     position: relative;
 }
 
+/* ローディング */
+#loading{
+    background-color: var(--bg);
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loading img{
+    width:50px;
+    animation: spinner 2s steps(8) infinite;
+}
+@keyframes spinner{
+    from{
+        rotate:0deg;
+    }
+    to{
+        rotate:360deg;
+    }
+}
+
 /*言語切り替え*/
 #lang-ch {
     position: fixed;
@@ -279,6 +309,7 @@ main {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 55px;
 }
 
 .site-text {
@@ -359,6 +390,49 @@ main {
     opacity: 1;
 }
 
+
+/*journey*/
+.journey-title{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 45px;
+    display: flex;
+    align-items: center;
+    gap:2em;
+}
+.journey-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 45px;
+    row-gap: 50px;
+}
+
+.journey-title::before,.journey-title::after{
+    content: "";
+    height:1px;
+    background-color: var(--font);
+    flex-grow: 2;
+    
+}
+.journey-img{
+    box-shadow: var(--neumo);
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 5/3;
+}
+.journey-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lum-lightbox{
+    z-index:900;
+}
+.lum-lightbox-inner img{
+    object-fit: contain;
+}
 
 
 /**aboutme**/
@@ -523,6 +597,7 @@ main {
     .site-list article {
         margin-bottom: 80px;
         padding: 25px;
+        border-radius: 15px;
     }
 
     .site-title {
@@ -531,6 +606,7 @@ main {
 
     .site-detail {
         flex-direction: column-reverse;
+        margin-bottom: 35px;
     }
 
     .site-text {
@@ -549,6 +625,22 @@ main {
         --outer-radius: 40px;
         --inner-radius: 22px;
         width: 100%;
+    }
+
+    .journey-title{
+        font-size: 1.3rem;
+        gap:20px;
+    }
+    .journey-list{
+        grid-template-columns: repeat(1,1fr);
+        width:80%;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        row-gap: 35px;
+    }
+    .journey-img{
+        border-radius: 12px;
     }
 
 

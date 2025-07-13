@@ -149,3 +149,16 @@ function stalker(){
     });
 };
 stalker();
+
+
+//ローディング画面
+window.onload=()=>{
+    gsap.to("#loading",{
+        autoAlpha:0,
+        duration:0.8,
+    })
+};
+
+
+//luminous
+new LuminousGallery(document.querySelectorAll(".journey-list a"));
