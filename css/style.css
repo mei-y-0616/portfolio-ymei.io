@@ -263,8 +263,6 @@ main {
     box-shadow: inset 5px 5px 10px 0px #A4B2C6, inset -5px -5px 10px 0px #FFFFFF;
 }
 
-/* --neumo: 10px 10px 20px 0px #A4B2C6, -10px -10px 20px 0px #FFFFFF; */
-
 .site-list article:last-child {
     margin-bottom: 0;
 }
@@ -277,6 +275,7 @@ main {
 
 .site-detail {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
 }
