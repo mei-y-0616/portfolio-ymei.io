@@ -243,17 +243,20 @@ main {
 }
 
 .sect-child-title {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.125rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top:30px;
+
 }
-
-
-/*site-list*/
 
 .site-list article {
     margin-bottom: 130px;
+    padding:35px;
+    border-radius: 25px;
+    box-shadow: inset 5px 5px 10px 0px #A4B2C6,inset -5px -5px 10px 0px #FFFFFF;
 }
+/* --neumo: 10px 10px 20px 0px #A4B2C6, -10px -10px 20px 0px #FFFFFF; */
 
 .site-list article:last-child {
     margin-bottom: 0;
@@ -431,7 +434,7 @@ main {
 .sns-link {
     margin-bottom: 20px;
     display: flex;
-    gap: 60px;
+    gap: 40px;
     justify-content: center;
 }
 
