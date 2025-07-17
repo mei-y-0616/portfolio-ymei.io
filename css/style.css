@@ -666,4 +666,8 @@ main {
     .mail {
         max-width: 250px;
     }
+
+    #stalker{
+        display: none;
+    }
 }
