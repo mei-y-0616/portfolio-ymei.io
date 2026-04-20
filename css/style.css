@@ -344,8 +344,8 @@ main {
 
 .site-img {
     /*border-radius padding用*/
-    --outer-radius: 70px;
-    --inner-radius: 40px;
+    --outer-radius: 35px;
+    --inner-radius: 15px;
 
     display: block;
     width: 70%;
@@ -622,8 +622,8 @@ main {
     }
 
     .site-img {
-        --outer-radius: 40px;
-        --inner-radius: 22px;
+        --outer-radius: 25px;
+        --inner-radius: 12px;
         width: 100%;
     }
 
