@@ -98,6 +98,29 @@ const historyItem = [
                     explain: "「Web制作プロジェクト」という授業で制作。最終プレゼンで約30チームの中から見事1位を頂いた作品。"
                 }
             ]
+    }, {
+        day: "2026.03",
+        dataAry:
+            [
+                {
+                    type: "site",
+                    title: "北海道情報大学　学習支援センター　Webサイト",
+                    href: "https://www01.do-johodai.ac.jp/asc/",
+                    img: "img/asc.webp",
+                }
+            ]
+    }, {
+        day: "2026.05",
+        dataAry:
+            [
+                {
+                    type: "site",
+                    title: "LuggGo!",
+                    href: "https://lugggo.up.railway.app/",
+                    img: "img/lugggo.webp",
+                    explain:"結果発表はもうすぐ"
+                }
+            ]
     }
     , {
         day: "Now",
